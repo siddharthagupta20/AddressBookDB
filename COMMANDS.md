@@ -1,8 +1,8 @@
 # Address Book DB Commands
 
-##UC1
+## UC1
 
-show databases;
+```show databases;
 +--------------------+
 | Database           |
 +--------------------+
@@ -27,10 +27,10 @@ Query OK, 1 row affected (0.16 sec)
 mysql> use address_book;
 Database changed
 mysql> select database();
-
+```
 ## UC2
 
- create table ad_book(
+ ```create table ad_book(
     -> first_name varchar(50) not null,
     -> last_name varchar(50) not null,
     -> address varchar(50) not null,
@@ -61,6 +61,6 @@ mysql> desc ad_book;
 | address_book |
 +--------------+
 1 row in set (0.00 sec)
-
+```
 
 
