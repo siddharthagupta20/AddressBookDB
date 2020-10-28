@@ -104,7 +104,7 @@ mysql> select * from ad_book;
 4 rows in set (0.06 sec)
 ```
 
-##UC5
+## UC5
 ```
 delete from ad_book
     -> where first_name='benjamin';
@@ -119,4 +119,23 @@ mysql> select * from ad_book;
 | Scott      | Morrison  | Questacon    | Canberra   | Australia | 444444 | 44 4444444444 | scotty@gmail.com    |
 +------------+-----------+--------------+------------+-----------+--------+---------------+---------------------+
 3 rows in set (0.04 sec)
+```
+## UC6
+```
+select * from ad_book where city like 'C%';
++------------+-----------+-----------+----------+-----------+--------+---------------+------------------+
+| first_name | last_name | address   | city     | state     | zip    | phone_number  | email            |
++------------+-----------+-----------+----------+-----------+--------+---------------+------------------+
+| Scott      | Morrison  | Questacon | Canberra | Australia | 444444 | 44 4444444444 | scotty@gmail.com |
++------------+-----------+-----------+----------+-----------+--------+---------------+------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from ad_book where state regexp '^j'
+    -> ;
++------------+-----------+---------+-------+-------+--------+---------------+---------------------+
+| first_name | last_name | address | city  | state | zip    | phone_number  | email               |
++------------+-----------+---------+-------+-------+--------+---------------+---------------------+
+| Yoshihide  | Suga      | skytree | tokyo | japan | 333333 | 33 3333333333 | yoshibaba@gmail.com |
++------------+-----------+---------+-------+-------+--------+---------------+---------------------+
+1 row in set (0.00 sec)
 ```
