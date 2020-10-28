@@ -230,3 +230,23 @@ select count(*) as No_of_Contacts, type
 +----------------+--------------+
 3 rows in set (0.00 sec)
 ```
+
+## UC11
+```
+insert into ad_book values('Ashraf','Ghani','gardens of babur','Kabul','Afghanistan',555555,'55 55555555','ashraf@gmail.com','AB1','professional'),
+    -> ('Vladimir','Putin','KGB HQ','Moscow','Russia',666666,'66 6666666666','legend@gmail.com','AB1','friend');
+Query OK, 2 rows affected (0.20 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from ad_book;
++------------+-----------+------------------+------------+-------------+--------+---------------+---------------------+------+--------------+
+| first_name | last_name | address          | city       | state       | zip    | phone_number  | email               | name | type         |
++------------+-----------+------------------+------------+-------------+--------+---------------+---------------------+------+--------------+
+| Donald     | Trump     | 2 don street     | washington | us of a     | 222222 | 22 2222222222 | dont-67@gmail.com   | AB1  | friend       |
+| Yoshihide  | Suga      | skytree          | tokyo      | japan       | 333333 | 33 3333333333 | yoshibaba@gmail.com | AB1  | family       |
+| Scott      | Morrison  | Questacon        | Canberra   | Australia   | 444444 | 44 4444444444 | scotty@gmail.com    | AB1  | professional |
+| Ashraf     | Ghani     | gardens of babur | Kabul      | Afghanistan | 555555 | 55 55555555   | ashraf@gmail.com    | AB1  | professional |
+| Vladimir   | Putin     | KGB HQ           | Moscow     | Russia      | 666666 | 66 6666666666 | legend@gmail.com    | AB1  | friend       |
++------------+-----------+------------------+------------+-------------+--------+---------------+---------------------+------+--------------+
+5 rows in set (0.06 sec)
+```
