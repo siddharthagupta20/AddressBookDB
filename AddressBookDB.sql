@@ -42,7 +42,7 @@ CREATE TABLE `ad_book` (
 
 LOCK TABLES `ad_book` WRITE;
 /*!40000 ALTER TABLE `ad_book` DISABLE KEYS */;
-INSERT INTO `ad_book` VALUES ('Donald','Trump','2 don street','washington','us of a',222222,'22 2222222222','dont-67@gmail.com','AB1','friend'),('Yoshihide','Suga','skytree','tokyo','japan',333333,'33 3333333333','yoshibaba@gmail.com','AB1','family'),('Scott','Morrison','Questacon','Canberra','Australia',444444,'44 4444444444','scotty@gmail.com','AB1','professional');
+INSERT INTO `ad_book` VALUES ('Donald','Trump','2 don street','washington','us of a',222222,'22 2222222222','dont-67@gmail.com','AB1','friend'),('Yoshihide','Suga','skytree','tokyo','japan',333333,'33 3333333333','yoshibaba@gmail.com','AB1','family'),('Scott','Morrison','Questacon','Canberra','Australia',444444,'44 4444444444','scotty@gmail.com','AB1','professional'),('Ashraf','Ghani','gardens of babur','Kabul','Afghanistan',555555,'55 55555555','ashraf@gmail.com','AB1','professional'),('Vladimir','Putin','KGB HQ','Moscow','Russia',666666,'66 6666666666','legend@gmail.com','AB1','friend');
 /*!40000 ALTER TABLE `ad_book` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-28 13:36:13
+-- Dump completed on 2020-10-28 13:57:41
