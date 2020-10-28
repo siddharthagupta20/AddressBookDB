@@ -2,7 +2,8 @@
 
 ## UC1
 
-```show databases;
+```
+show databases;
 +--------------------+
 | Database           |
 +--------------------+
@@ -30,7 +31,8 @@ mysql> select database();
 ```
 ## UC2
 
- ```create table ad_book(
+ ```
+ create table ad_book(
     -> first_name varchar(50) not null,
     -> last_name varchar(50) not null,
     -> address varchar(50) not null,
