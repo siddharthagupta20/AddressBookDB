@@ -40,7 +40,7 @@ CREATE TABLE `ad_book` (
 
 LOCK TABLES `ad_book` WRITE;
 /*!40000 ALTER TABLE `ad_book` DISABLE KEYS */;
-INSERT INTO `ad_book` VALUES ('Benjamin','Shapiro','1 ben street','ny','ny state',111111,'11 1111111111','bens@gmail.com'),('Donald','Trump','2 don street','washington','us of a',222222,'22 2222222222','dont-67@gmail.com'),('Yoshihide','Suga','skytree','tokyo','japan',333333,'33 3333333333','yoshibaba@gmail.com'),('Scott','Morrison','Questacon','Canberra','Australia',444444,'44 4444444444','scotty@gmail.com');
+INSERT INTO `ad_book` VALUES ('Donald','Trump','2 don street','washington','us of a',222222,'22 2222222222','dont-67@gmail.com'),('Yoshihide','Suga','skytree','tokyo','japan',333333,'33 3333333333','yoshibaba@gmail.com'),('Scott','Morrison','Questacon','Canberra','Australia',444444,'44 4444444444','scotty@gmail.com');
 /*!40000 ALTER TABLE `ad_book` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-28 12:14:50
+-- Dump completed on 2020-10-28 12:19:37
