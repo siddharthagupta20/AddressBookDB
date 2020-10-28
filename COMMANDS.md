@@ -64,5 +64,27 @@ mysql> desc ad_book;
 +--------------+
 1 row in set (0.00 sec)
 ```
+## UC3
 
+```
+ insert into ad_book (first_name,last_name, address, city, state, zip, phone_number, email)
+    -> values ("Ben","Shapiro","1 ben street","ny","ny state",111111, "11 1111111111", "bens@gmail.com"),
+    -> ("Donald", "Trump", "2 don street", "washington", "us of a", 222222, "22 2222222222", "dont-67@gmail.com"),
+    -> ("Yoshihide", "Suga", "skytree", "tokyo", "japan", 333333, "33 3333333333","yoshibaba@gmail.com"),
+    -> ("Scott","Morrison", "Questacon", "Canberra", "Australia", 444444, "44 4444444444", "scotty@gmail.com")
+    -> ;
+Query OK, 4 rows affected (0.17 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> select * from ad_book;
++------------+-----------+--------------+------------+-----------+--------+---------------+---------------------+
+| first_name | last_name | address      | city       | state     | zip    | phone_number  | email               |
++------------+-----------+--------------+------------+-----------+--------+---------------+---------------------+
+| Ben        | Shapiro   | 1 ben street | ny         | ny state  | 111111 | 11 1111111111 | bens@gmail.com      |
+| Donald     | Trump     | 2 don street | washington | us of a   | 222222 | 22 2222222222 | dont-67@gmail.com   |
+| Yoshihide  | Suga      | skytree      | tokyo      | japan     | 333333 | 33 3333333333 | yoshibaba@gmail.com |
+| Scott      | Morrison  | Questacon    | Canberra   | Australia | 444444 | 44 4444444444 | scotty@gmail.com    |
++------------+-----------+--------------+------------+-----------+--------+---------------+---------------------+
+4 rows in set (0.00 sec)
+```
 
