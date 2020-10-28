@@ -1,8 +1,8 @@
 # Address Book DB Commands
 
-##UC1
+## UC1
 
-show databases;
+```show databases;
 +--------------------+
 | Database           |
 +--------------------+
@@ -33,6 +33,6 @@ mysql> select database();
 | address_book |
 +--------------+
 1 row in set (0.00 sec)
-
+```
 
 
