@@ -165,3 +165,16 @@ mysql> select count(first_name) as No_Of_Persons, state
 +---------------+-----------+
 3 rows in set (0.00 sec)
 ```
+
+## UC8
+```
+ select * from ad_book
+    -> where city like 'w%'
+    -> order by first_name;
++------------+-----------+--------------+------------+---------+--------+---------------+-------------------+
+| first_name | last_name | address      | city       | state   | zip    | phone_number  | email             |
++------------+-----------+--------------+------------+---------+--------+---------------+-------------------+
+| Donald     | Trump     | 2 don street | washington | us of a | 222222 | 22 2222222222 | dont-67@gmail.com |
++------------+-----------+--------------+------------+---------+--------+---------------+-------------------+
+1 row in set (0.00 sec)
+```
