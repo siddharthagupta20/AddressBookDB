@@ -2,7 +2,8 @@
 
 ## UC1
 
-```show databases;
+```
+show databases;
 +--------------------+
 | Database           |
 +--------------------+
