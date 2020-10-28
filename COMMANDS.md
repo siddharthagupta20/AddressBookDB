@@ -180,3 +180,40 @@ mysql> select count(first_name) as No_Of_Persons, state
 +------------+-----------+--------------+------------+---------+--------+---------------+-------------------+
 1 row in set (0.00 sec)
 ```
+
+## UC9
+```
+update ad_book
+    -> set name='AB1'
+    -> where 2=2;
+Query OK, 3 rows affected (0.14 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+ mysql>update ad_book
+    -> set type='family'
+    -> where first_name like 'y%';
+Query OK, 1 row affected (0.13 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update ad_book
+    -> set type='friend'
+    -> where first_name like 'd%';
+Query OK, 1 row affected (0.18 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update ad_book
+    -> set type='professional'
+    -> where first_name like 'scott';
+Query OK, 1 row affected (0.13 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from ad_book;
++------------+-----------+--------------+------------+-----------+--------+---------------+---------------------+------+--------------+
+| first_name | last_name | address      | city       | state     | zip    | phone_number  | email               | name | type         |
++------------+-----------+--------------+------------+-----------+--------+---------------+---------------------+------+--------------+
+| Donald     | Trump     | 2 don street | washington | us of a   | 222222 | 22 2222222222 | dont-67@gmail.com   | AB1  | friend       |
+| Yoshihide  | Suga      | skytree      | tokyo      | japan     | 333333 | 33 3333333333 | yoshibaba@gmail.com | AB1  | family       |
+| Scott      | Morrison  | Questacon    | Canberra   | Australia | 444444 | 44 4444444444 | scotty@gmail.com    | AB1  | professional |
++------------+-----------+--------------+------------+-----------+--------+---------------+---------------------+------+--------------+
+3 rows in set (0.00 sec)
+```
