@@ -103,3 +103,20 @@ mysql> select * from ad_book;
 +------------+-----------+--------------+------------+-----------+--------+---------------+---------------------+
 4 rows in set (0.06 sec)
 ```
+
+##UC5
+```
+delete from ad_book
+    -> where first_name='benjamin';
+Query OK, 1 row affected (0.12 sec)
+
+mysql> select * from ad_book;
++------------+-----------+--------------+------------+-----------+--------+---------------+---------------------+
+| first_name | last_name | address      | city       | state     | zip    | phone_number  | email               |
++------------+-----------+--------------+------------+-----------+--------+---------------+---------------------+
+| Donald     | Trump     | 2 don street | washington | us of a   | 222222 | 22 2222222222 | dont-67@gmail.com   |
+| Yoshihide  | Suga      | skytree      | tokyo      | japan     | 333333 | 33 3333333333 | yoshibaba@gmail.com |
+| Scott      | Morrison  | Questacon    | Canberra   | Australia | 444444 | 44 4444444444 | scotty@gmail.com    |
++------------+-----------+--------------+------------+-----------+--------+---------------+---------------------+
+3 rows in set (0.04 sec)
+```
