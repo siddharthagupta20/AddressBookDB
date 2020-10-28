@@ -139,3 +139,29 @@ mysql> select * from ad_book where state regexp '^j'
 +------------+-----------+---------+-------+-------+--------+---------------+---------------------+
 1 row in set (0.00 sec)
 ```
+## UC7
+```
+select count(first_name) as No_Of_Persons, city
+    -> from ad_book
+    -> group by city;
++---------------+------------+
+| No_Of_Persons | city       |
++---------------+------------+
+|             1 | washington |
+|             1 | tokyo      |
+|             1 | Canberra   |
++---------------+------------+
+3 rows in set (0.00 sec)
+
+mysql> select count(first_name) as No_Of_Persons, state
+    -> from ad_book
+    -> group by state;
++---------------+-----------+
+| No_Of_Persons | state     |
++---------------+-----------+
+|             1 | us of a   |
+|             1 | japan     |
+|             1 | Australia |
++---------------+-----------+
+3 rows in set (0.00 sec)
+```
