@@ -250,3 +250,93 @@ mysql> select * from ad_book;
 +------------+-----------+------------------+------------+-------------+--------+---------------+---------------------+------+--------------+
 5 rows in set (0.06 sec)
 ```
+
+## UC12 
+```
+added ER Diagram
+```
+
+## UC13
+```
+USE address_book;
+-- CREATING TABLES
+create table address_books(
+ab_id int unsigned not null unique auto_increment,
+ab_name varchar(50) not null,
+primary key(ab_id)
+);
+create table contact_type(
+type_id int unsigned primary key not null unique auto_increment,
+type_name varchar(50) not null
+);
+create table person_contact(
+person_id int unsigned not null unique auto_increment,
+first_name varchar(50) not null,
+last_name varchar(50) not null,
+email varchar(50) not null,
+ab_id int unsigned not null,
+type_id int unsigned not null,
+primary key (person_id),
+foreign key (ab_id) references address_books(ab_id),
+foreign key(type_id) references contact_type(type_id)
+);
+create table address(
+person_id int unsigned not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+zip bigint not null,
+foreign key (person_id) references person_contact(person_id)
+);
+create table phone_numbers(
+person_id int unsigned not null,
+ph_no varchar(50) not null unique,
+foreign key (person_id) references person_contact(person_id)
+);
+-- ------------------------------------
+-- INSERTING VALUES
+insert into address_books (ab_name)
+values
+	("AB1"),
+	("AB2");
+insert into contact_type (type_name)
+values
+	('Family'),
+    ('Friend'),
+    ('Professional');
+insert into person_contact (first_name, last_name, email, ab_id, type_id)
+values
+	('Donald','Trump','dont-67@gmail.com',1,2),
+    ('Yoshihide',	'Suga',	'yoshibaba@gmail.com',	1,1),
+    ('Ashraf', 'Ghani','ashraf@gmail.com',1,3),
+    ('Scott','Morrison','scotty@gmail.com',1,3),
+    ('Vladimir','Putin','legend@gmail.com',1,2)
+    ;
+insert into address (person_id, address, city, state,zip)
+values
+	(1,'2 don street','washington',	'us of a',	222222),
+    (2,'skytree',	'tokyo',	'japan'	,333333),
+    (3,'gardens of babur',	'Kabul',	'Afghanistan'	,555555),
+    (4,'Questacon',	'Canberra',	'Australia',	444444),
+    (5,'KGB HQ',	'Moscow',	'Russia',	666666);
+ insert into phone_numbers (person_id, ph_no)
+ values
+	(1,'11 1111111111'),
+    (2,'22 2222222222'),
+    (3,'33 3333333333'),
+    (4, '44 4444444444'),
+    (5, '55 5555555555');
+insert into phone_numbers 
+values
+(5,'50 5050505050');
+
+-- -------------------------
+-- EXECUTING STATEMENTS
+select first_name, ph_no, email, tYpe_name as contact_type
+from person_contact pc
+join phone_numbers pn
+	on pc.person_id=pn.person_id
+join contact_type ct
+	on pc.type_id=ct.type_id
+order by first_name;
+```
